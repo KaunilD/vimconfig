@@ -7,16 +7,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"call vundle#begin('~/.vim/bundles/')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" All the plugins below this line
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Valloric/YouCompleteMe'
 
-" All of your Plugins must be added before the following line
+" Plugin list end
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -36,6 +36,7 @@ set shiftround
 set title
 set linebreak
 set nu
+
 " YouCompleteMe Config
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
